@@ -1,0 +1,13 @@
+<div class="container-all pt-3">
+  <div class="private-box w-75">
+    <h2 class="bg-warning p-1">Private page</h2>
+    {{#if user}}
+    <div class="mb-2">
+      <h1>Who's the best developer?</h1>
+      <h1>You are, <span style="color: #e9e9e9;">{{ user.username}}</span>. You are. </h1>
+      <img src="http://media.giphy.com/media/UsK5GqD3e0huU/giphy.gif" alt="You rock." class="img-border w-100">
+    </div>
+    {{!-- <a href="/" class="btn-log-sign">Index</a> --}}
+    {{/if}}
+  </div>
+</div>

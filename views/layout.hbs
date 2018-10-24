@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+    crossorigin="anonymous">
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+  <title>{{title}}</title>
+</head>
+
+<body>
+  <nav class="nav p-2 border-bottom border-light">
+    {{#if username}}
+    {{!-- <a href="/" class="p-2">Home</a> --}}
+    <a href="/logout" class="p-2">Logout</a>
+    <a href="/private-page" class="p-2 btn-warning">Secret page</a>
+    {{else}}
+    <a href="/" class="p-2">Home</a>
+    <a href="/login" class="p-2">Login</a>
+    <a href="/signup" class="p-2">Sign up</a>
+    <a href="/private-page" class="p-2 btn-warning">Secret page</a>
+    {{/if}}
+  </nav>
+
+  {{{body}}}
+
+  <script src='/javascripts/script.js'></script>
+</body>
+
+</html>
