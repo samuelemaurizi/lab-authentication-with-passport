@@ -1,17 +1,15 @@
 const express = require("express");
 const router = express.Router();
 
-/* GET home page */
-// router.get('/', (req, res, next) => {
-//   res.render('index');
-// });
+// Global User variable
+router.get("*", (req, res, next) => {
+  res.locals.user = req.user || null;
+  next();
+});
 
+/* GET home page */
 router.get("/", (req, res, next) => {
-  if (req.user) {
-    res.render("index", { username: req.user.username });
-  } else {
-    res.render("index");
-  }
+  res.render("index");
 });
 
 module.exports = router;

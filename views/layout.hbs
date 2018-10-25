@@ -10,12 +10,11 @@
 
 <body>
   <nav class="nav p-2 border-bottom border-light">
-    {{#if username}}
-    {{!-- <a href="/" class="p-2">Home</a> --}}
+    <a href="/" class="p-2">Home</a>
+    {{#if user}}
     <a href="/logout" class="p-2">Logout</a>
     <a href="/private-page" class="p-2 btn-warning">Secret page</a>
     {{else}}
-    <a href="/" class="p-2">Home</a>
     <a href="/login" class="p-2">Login</a>
     <a href="/signup" class="p-2">Sign up</a>
     <a href="/private-page" class="p-2 btn-warning">Secret page</a>

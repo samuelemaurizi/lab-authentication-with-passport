@@ -65,15 +65,14 @@ router.get("/login", (req, res, next) => {
 });
 
 // Start session with Passport
-router.post(
-  "/login",
+router.post("/login", (req, res, next) => {
   passport.authenticate("local", {
     successRedirect: "/",
     failureRedirect: "/login",
     failureFlash: true,
     passReqToCallback: true
-  })
-);
+  })(req, res, next);
+});
 
 // ////////////////////////////////////////
 // //////////////////// GET PRIVATE PAGE
