@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
 
-// Global User variable
+// Global User variable for all routers
 router.get("*", (req, res, next) => {
   res.locals.user = req.user || null;
   next();
